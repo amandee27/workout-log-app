@@ -1,0 +1,56 @@
+{
+    "users": [
+        {
+            "username": "Amandee",
+            "weight" : "58 kg",
+            "id": 1,
+            "workouts": [
+                {
+                    "e_id":1,
+                    "name": "pushup",
+                    "wieght-strength": "10kg",
+                    "countsPerRound": 12,
+                    "rounds": 3
+                },
+                {
+                    "e_id":2,
+                    "name": "bench press",
+                    "equipment-machine": "dumbell",
+                    "wieght-strength": "6kg",
+                    "countsPerRound": 12,
+                    "rounds": 3
+                }
+            ]
+        },
+        {
+            "username": "Tharaka",
+            "weight" : "76 kg",
+            "id": 2,
+            "workouts": [
+                {
+                    "e_id":1,
+                    "name": "pushup",
+                    "wieght-strength": "10kg",
+                    "countsPerRound": 12,
+                    "rounds": 3
+                },
+                {
+                    "e_id":2,
+                    "name": "bench press",
+                    "equipment-machine": "dumbell",
+                    "wieght-strength": "6kg",
+                    "countsPerRound": 12,
+                    "rounds": 3
+                }
+            ]
+        }
+    ],
+    "workouts": [
+        {
+            "id": 1,
+            "name": "bench press",
+            "type": "arms"
+        }
+    ]
+
+}
