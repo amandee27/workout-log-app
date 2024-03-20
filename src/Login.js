@@ -1,13 +1,16 @@
 import { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 //useNavigate option not available in react router dom 5
 
-const Login = () => {
+const Login = (props) => {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [emailError, setEmailError] = useState('');
     const [passwordError, setPasswordError] = useState('');
+   // const { state } = useLocation();
+   // const { updateData } = state || {}; //from app.js
+   // const [newData, setNewData] = useState(false);
     const navigate = useNavigate();
 
    
@@ -40,6 +43,12 @@ const Login = () => {
 
         login();
     }
+/*
+    const updateLoginStatus = () => {
+        if (updateData) {
+          updateData(newData);
+        }
+      };*/
 
     const login = () => {
         console.log("triggerring")
@@ -59,6 +68,9 @@ const Login = () => {
             console.log(data);
             localStorage.setItem('login', JSON.stringify(true));
             localStorage.setItem('token', JSON.stringify(data.accessToken));
+            //setNewData(true);
+            //updateLoginStatus();
+            props.funcNav(true);
             navigate("/");
         })
     }

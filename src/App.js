@@ -2,7 +2,7 @@ import Home from './Home';
 import NavBar from './NavBar';
 import UserDetail from './UserDetail';
 import Users from './Users';
-import {  Routes, Route, useNavigate, useLocation } from 'react-router-dom';
+import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import WorkoutCategory from './WorkoutCategory';
 import LoggedWorkout from './LoggedWorkout';
 import WorkoutSummmary from './WorkoutSummary';
@@ -12,6 +12,7 @@ import SignIn from './Sign-In';
 import PageNotFound from './PageNotFound';
 import { useState, useEffect } from 'react';
 import './App.css';
+import ProtectedRoute from './ProtectedRoute';
 
 function App() {
   //const {username, setUsername} = useState(null)
@@ -19,12 +20,19 @@ function App() {
   //console.log(username);
   //console.log(loggedIn);
 
-  const [loggedIn, setLoggedIn] = useState(JSON.parse(localStorage.getItem('login')));
+  const [loggedIn, setLoggedIn] = useState(JSON.parse(localStorage.getItem('token')));
   const navigate = useNavigate();
   const location = useLocation();
-  const {pathname} = useLocation();
-  
- 
+  const { pathname } = useLocation();
+  const [showNav, setShowNav] = useState(false);
+  /*
+  const updateData = (newData) => {
+    setLoggedIn(newData);
+  }
+
+  */
+
+
 
   //const checkLocalStorage = () => {
   //   if (localStorage.getItem('login') !== null) {
@@ -40,68 +48,53 @@ function App() {
   //     setLoggedIn(JSON.parse(localStorage.getItem('login')));
   //   }
   // }
-
-  const setLocalStorageData = () => {
+  /*
+    const setLocalStorageData = () => {
+      
+      console.log("This is local storage login status : ", loggedIn);
+      if(loggedIn === null) {
+        localStorage.setItem('login', JSON.stringify(false));
+        setLoggedIn(false);
+      } else {
+        setLoggedIn(JSON.parse(localStorage.getItem('login')));
+      }
+     
+    }
     
-    console.log("This is local storage login status : ", loggedIn);
-    if(loggedIn === null) {
-      localStorage.setItem('login', JSON.stringify(false));
-      setLoggedIn(false);
-    } else {
-      setLoggedIn(JSON.parse(localStorage.getItem('login')));
-    }
-   
-  }
   
-
-  useEffect(() => {
-    console.log("This is: ",loggedIn);
-    setLocalStorageData();
-    if(loggedIn  === false) { 
-      navigate("/login");
-    }
-  }, [loggedIn,pathname]);
-
+    useEffect(() => {
+      console.log("This is: ",loggedIn);
+      setLocalStorageData();
+      if(loggedIn  === false) { 
+        navigate("/login", { state: { updateData } });
+      }
+    }, [loggedIn,pathname]);
   
-
+    */
   return (
 
 
 
     <div>
-      <NavBar />
-      {loggedIn}
+      {showNav &&
+        <nav>
+          <NavBar />
+        </nav>
+      }
       <div>
         <Routes>
-          <Route exact path="/" element={<Home />}>
+          <Route element={<ProtectedRoute />}>
+            <Route exact path="/" element={<Home />}></Route>
+            <Route exact path="/users" element={<Users />}></Route>
+            <Route exact path="/users/:id" element={<UserDetail />}></Route>
+            <Route exact path='/workout-history' element={<LoggedWorkout />}></Route>
+            <Route exact path='/workout-type' element={<WorkoutCategory />}></Route>
+            <Route exact path='/workout-summary' element={<WorkoutSummmary />}></Route>
+            <Route path='/weight-summary' element={<WeightMonitor />}></Route>
           </Route>
-          <Route exact path="/users" element={<Users />}>
-
-          </Route>
-          <Route exact path="/users/:id" element={<UserDetail />}>
-
-          </Route>
-          <Route exact path='/workout-history' element={<LoggedWorkout />}>
-
-          </Route>
-          <Route exact path='/workout-type' element={<WorkoutCategory />}>
-
-          </Route>
-          <Route exact path='/workout-summary' element={<WorkoutSummmary />}>
-
-          </Route>
-          <Route path='/weight-summary' element={<WeightMonitor />}>
-
-          </Route>
-          <Route path='/login' element={<Login />}>
-
-          </Route>
-          <Route path='/sign-up' element={<SignIn />}>
-
-          </Route>
-          <Route path='*' element={<PageNotFound />}>
-
-          </Route>
+          <Route path='/login' element={<Login funcNav={setShowNav} />}></Route>
+          <Route path='/sign-up' element={<SignIn />}></Route>
+          <Route path='*' element={<PageNotFound />}></Route>
         </Routes>
       </div>
     </div>
