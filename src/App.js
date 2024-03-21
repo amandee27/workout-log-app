@@ -15,22 +15,21 @@ import './App.css';
 import ProtectedRoute from './ProtectedRoute';
 
 function App() {
-  //const {username, setUsername} = useState(null)
-
-  //console.log(username);
-  //console.log(loggedIn);
-
-  //const [loggedIn, setLoggedIn] = useState(JSON.parse(localStorage.getItem('token')));
-  ///const navigate = useNavigate();
-  //const location = useLocation();
-  //const { pathname } = useLocation();
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
   /*
   const updateData = (newData) => {
     setLoggedIn(newData);
   }
 
   */
+  //const {username, setUsername} = useState(null)
+  //console.log(username);
+  //console.log(loggedIn);
+  ///const navigate = useNavigate();
+  //const location = useLocation();
+  //const { pathname } = useLocation();
+  const [loggedIn, setLoggedIn] = useState(JSON.parse(localStorage.getItem('token')));
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  
 
 
 
@@ -71,6 +70,12 @@ function App() {
     }, [loggedIn,pathname]);
   
     */
+
+    useEffect(() => {
+      if(loggedIn){
+        setIsLoggedIn(true);
+      }
+    }, [loggedIn])
 
      
 
