@@ -20,11 +20,11 @@ function App() {
   //console.log(username);
   //console.log(loggedIn);
 
-  const [loggedIn, setLoggedIn] = useState(JSON.parse(localStorage.getItem('token')));
-  const navigate = useNavigate();
-  const location = useLocation();
-  const { pathname } = useLocation();
-  const [showNav, setShowNav] = useState(false);
+  //const [loggedIn, setLoggedIn] = useState(JSON.parse(localStorage.getItem('token')));
+  ///const navigate = useNavigate();
+  //const location = useLocation();
+  //const { pathname } = useLocation();
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   /*
   const updateData = (newData) => {
     setLoggedIn(newData);
@@ -71,16 +71,18 @@ function App() {
     }, [loggedIn,pathname]);
   
     */
+
+     
+
+    const handleLogin = () => {
+      // Perform login logic
+      setIsLoggedIn(true);
+      console.log("Calling from login ", isLoggedIn);
+    };
+
   return (
-
-
-
     <div>
-      {showNav &&
-        <nav>
-          <NavBar />
-        </nav>
-      }
+      {isLoggedIn && <NavBar></NavBar>}
       <div>
         <Routes>
           <Route element={<ProtectedRoute />}>
@@ -92,7 +94,7 @@ function App() {
             <Route exact path='/workout-summary' element={<WorkoutSummmary />}></Route>
             <Route path='/weight-summary' element={<WeightMonitor />}></Route>
           </Route>
-          <Route path='/login' element={<Login funcNav={setShowNav} />}></Route>
+          <Route path='/login' element={<Login onLogin={handleLogin} />}></Route>
           <Route path='/sign-up' element={<SignIn />}></Route>
           <Route path='*' element={<PageNotFound />}></Route>
         </Routes>
