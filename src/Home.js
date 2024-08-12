@@ -6,7 +6,8 @@ const Home = () => {
 
     return (  
         <div className="home">
-            {data && <Users users={data} title="All users#"></Users>}
+            {/* {data && <Users users={data} title="All users#"></Users>} */}
+            <h1>This is home page</h1>
         </div>
      );
 }
