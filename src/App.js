@@ -20,6 +20,7 @@ import PlannedWorkout from './PlannedWorkout/PlannedWorkout';
 import { BrowserRouter } from 'react-router-dom';
 import AddWorkout from './AddWorkout/AddWorkout';
 import LoggedWorkoutDetail from './LoggedWorkout/LoggedWorkoutDetails/LoggedWorkoutDetails';
+import TestMainPage from './Testpage/TestMainPage';
 
 
 function App() {
@@ -118,6 +119,7 @@ function App() {
               <Route path='/calendar' element={<PlannedWorkout />}></Route>
               <Route path='/add-workout' element={<AddWorkout />}></Route>
               <Route path='/logged-workout' element={<LoggedWorkoutDetail />}></Route>
+              <Route path='/test' element={<TestMainPage />}></Route>
             </Route>
             {!isLoggedIn && <Route path='/login' element={<Login onLogin={handleLogin} />}></Route>}
             <Route path='/sign-up' element={<SignIn />}></Route>
