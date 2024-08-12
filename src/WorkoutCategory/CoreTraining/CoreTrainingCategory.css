@@ -1,0 +1,85 @@
+.btnStyle {
+    background-color: orangered;
+    color: white;
+    border-radius: 4px;
+    border-width: 1px;
+    border-color: transparent;
+    font-size: 12px;
+    font-family:Helvetica;
+  }
+  .btnStyle:hover{
+    background-color: white;
+    color: orangered;
+    border-radius: 4px;
+    border-width: 1px;
+    border-color: orangered;
+    border-style: solid;
+    font-size: 12px;
+    font-family:Helvetica;
+  }
+
+  .btnStyle2 {
+    background-color: white;
+    color: orangered;
+    border-radius: 4px;
+    border-width: 1px;
+    border-color: orangered;
+    border-style: solid;
+    font-size: 12px;
+    font-family:Helvetica;
+  }
+
+  .btnStyle2:hover{
+    background-color: orangered;
+    color: white;
+    border-radius: 4px;
+    border-width: 1px;
+    border-color: transparent;
+    font-size: 12px;
+    font-family:Helvetica;
+  }
+
+  .coreTrainingContainer{
+    width: 100%;
+    min-height: 100vh; /*Keep vertical height 100%*/
+    display: flex;
+    flex-direction: row;
+    padding-left: 7.5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    background-color: lightgray;
+  }
+
+  
+
+  .childContainer{
+    position: absolute;
+    top: 60%;
+    left: 60%;
+    margin: -100px 0 0 -150px;
+  }
+
+  .cardImageContainer{
+    width: 16rem;
+    height: 16rem;
+    background-color: rgba(255, 228, 196, 0.213);
+    padding: 1rem 1rem 1rem 1rem;
+  }
+
+  .cardTitleStyle, .cardBodyStyle{
+    font-family:Helvetica;
+  }
+
+  .cardBodyStyle{
+    font-size: 14px;
+  }
+/*
+  .loadingContainer {
+    width: 100%;
+    height: 800px;
+    background-color: rgba(119, 136, 153, 0.681);
+  }
+  
+  */

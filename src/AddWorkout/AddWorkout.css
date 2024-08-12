@@ -1,0 +1,71 @@
+.formBox {
+    min-width: 40%;
+    height: 70vh;
+    border: transparent;
+    margin-bottom: 100px;
+    padding: 5vw;
+    position: relative;
+    font-family: Helvetica;
+    position: absolute;
+    top: 28%;
+    left: 40%;
+    margin: -100px 0 0 -150px;
+    background-color: rgba(211, 211, 211, 0.322) ;
+
+
+  }
+  
+  .formBox h5 {
+    color: black;
+    text-align: center;
+    font-size: 35px;
+    margin: 0 0 5vh 0;
+    font-weight: bold;
+
+  }
+  
+  .formBox label {
+    display: block;
+    text-align: left;
+    font-size: 15px;
+    /**margin: 0 0 2vh 0;*/
+    margin-left: 0px;
+    background-color: transparent;
+  }
+  
+  .form-box input {
+    display: block;
+    width: 100%;
+    padding: .5rem .8rem .5rem .8rem;
+    margin: .9vw 0;
+    border: 0;
+    border-radius: 5px;
+    font-size: 15px;
+  }
+  
+  .submit-btn {
+    display: inline-block;
+    width: 20%;
+    height: 1.5rem;
+    background-color: orangered;
+    color: whitesmoke;
+    border: 0;
+    bottom: 0;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    position: relative ;
+    margin: 1rem 0 1rem 8rem;
+    margin-left: 40%;   
+    border-radius: 4px; 
+    transition: all .3s;
+  }
+  
+  .submit-btn:hover{
+   
+    filter: brightness(90%);
+  }
+
+  .formContent{
+    padding-left: 35px;
+  }

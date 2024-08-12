@@ -1,0 +1,24 @@
+.detail-box{
+    background-color: lightgrey;
+    width: 80%;
+    height: 200 vh;
+    position: relative;
+    top: 20vh;
+    left: 15vh;   
+}
+
+.details {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 0 20px 30px ;
+    flex-wrap: wrap; /* Make equal gap between rows. In bootsrap there were different height in between rows */
+}
+
+.detail-header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 15px 0px;
+}
