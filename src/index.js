@@ -1,14 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import { BrowserRouter } from 'react-router-dom';
 import './index.css';
+import 'bootstrap-icons/font/bootstrap-icons.css';
+import 'react-big-calendar/lib/css/react-big-calendar.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+console.log("index.js renderring");
 root.render(
-    <BrowserRouter>
-        <App />
-    </BrowserRouter>
+    
+    <App /> 
 
 
 );
