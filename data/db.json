@@ -1,56 +1,401 @@
 {
-    "users": [
+  "users": [
+    {
+      "email": "testuser4@mail.com",
+      "password": "$2a$10$7rE5gN31PZbjrLcyQQWPFeCQcOb4vnAn1Ef9yuh91rVfdqDoqOvlC",
+      "username": "testuser4",
+      "id": 1
+    }
+  ],
+  "userData": [
+    {
+      "username": "testuser4",
+      "id": 1,
+      "weight": 58,
+      "height": 150,
+      "logged_workouts": [
         {
-            "username": "Amandee",
-            "weight" : "58 kg",
-            "id": 1,
-            "workouts": [
-                {
-                    "e_id":1,
-                    "name": "pushup",
-                    "wieght-strength": "10kg",
-                    "countsPerRound": 12,
-                    "rounds": 3
-                },
-                {
-                    "e_id":2,
-                    "name": "bench press",
-                    "equipment-machine": "dumbell",
-                    "wieght-strength": "6kg",
-                    "countsPerRound": 12,
-                    "rounds": 3
-                }
-            ]
+          "e_id": 1,
+          "name": "pushup",
+          "equipment_machine": "dumbell",
+          "weight_strength": "10kg",
+          "countsPerRound": 12,
+          "rounds": 3,
+          "day": 1,
+          "month": 1
         },
         {
-            "username": "Tharaka",
-            "weight" : "76 kg",
-            "id": 2,
-            "workouts": [
-                {
-                    "e_id":1,
-                    "name": "pushup",
-                    "wieght-strength": "10kg",
-                    "countsPerRound": 12,
-                    "rounds": 3
-                },
-                {
-                    "e_id":2,
-                    "name": "bench press",
-                    "equipment-machine": "dumbell",
-                    "wieght-strength": "6kg",
-                    "countsPerRound": 12,
-                    "rounds": 3
-                }
-            ]
+          "e_id": 2,
+          "name": "bench press",
+          "equipment_machine": "dumbell",
+          "weight_strength": "6kg",
+          "countsPerRound": 12,
+          "rounds": 3,
+          "day": 1,
+          "id": 1
         }
-    ],
-    "workouts": [
+      ],
+      "planned_workouts": [
         {
-            "id": 1,
-            "name": "bench press",
-            "type": "arms"
+          "e_id": 1,
+          "name": "pushup",
+          "equipment_machine": "dumbell",
+          "weight_strength": "10kg",
+          "countsPerRound": 12,
+          "rounds": 3,
+          "date": "Mon May 06 2024 00:00:00 GMT+0100 (British Summer Time)",
+          "id": 1
+        },
+        {
+          "e_id": 2,
+          "name": "bench press",
+          "equipment_machine": "dumbell",
+          "weight_strength": "6kg",
+          "countsPerRound": 12,
+          "rounds": 3,
+          "date": "Mon May 06 2024 00:00:00 GMT+0100 (British Summer Time)"
         }
-    ]
-
+      ]
+    }
+  ],
+  "workouts": [
+    {
+      "w_id": 1,
+      "name": "bench press",
+      "category_id": 1,
+      "category_name": "intensity",
+      "video": "test",
+      "body_area": "chest",
+      "b_id": 1,
+      "image": "https://i.pinimg.com/564x/3a/9e/1b/3a9e1b050f7b9c10a9bccc52438b9b2e.jpg"
+    },
+    {
+      "w_id": 2,
+      "name": "bisep curl",
+      "category_id": 1,
+      "category_name": "intensity",
+      "video": "test",
+      "body_area": "arm",
+      "b_id": 2,
+      "image": "https://www.shutterstock.com/image-vector/woman-doing-dumbbell-bicep-curls-600nw-2033175686.jpg"
+    },
+    {
+      "w_id": 3,
+      "name": "Push up",
+      "category_id": 1,
+      "category_name": "intensity",
+      "video": "test",
+      "body_area": "arm",
+      "b_id": 2,
+      "image": "https://hips.hearstapps.com/hmg-prod/images/2-bbg-workout-push-ups-1547123211.jpg?crop=1.00xw:0.891xh;0,0.109xh&resize=980:*"
+    },
+    {
+      "w_id": 4,
+      "name": "Squats",
+      "category_id": 1,
+      "category_name": "intensity",
+      "video": "test",
+      "body_area": "hips and thigh",
+      "b_id": 3,
+      "image": "https://i.pinimg.com/564x/07/21/2d/07212daa79d81ecb620cd8a065dd68e0.jpg"
+    },
+    {
+      "w_id": 5,
+      "name": "leg press",
+      "category_id": 1,
+      "category_name": "intensity",
+      "video": "test",
+      "body_area": "hips and thigh",
+      "b_id": 3,
+      "image": "https://www.shutterstock.com/shutterstock/photos/2251772205/display_1500/stock-vector-woman-doing-leg-press-exercise-on-machine-flat-vector-illustration-isolated-on-white-background-2251772205.jpg"
+    },
+    {
+      "w_id": 6,
+      "name": "plank",
+      "category_id": 2,
+      "category_name": "core",
+      "video": "test",
+      "body_area": "core, upper body, lower body",
+      "b_id": 4,
+      "image": "https://images.livemint.com/img/2021/06/24/1140x641/iStock-1150246541_1624523599761_1624523629472.jpg"
+    },
+    {
+      "w_id": 7,
+      "name": "side plank",
+      "category_id": 2,
+      "category_name": "core",
+      "video": "test",
+      "body_area": "upper and lower back muscles",
+      "b_id": 5,
+      "image": "https://hips.hearstapps.com/hmg-prod/images/side-plank-1549646915.jpg"
+    },
+    {
+      "w_id": 7,
+      "name": "Bicycle crunch",
+      "category_id": 2,
+      "category_name": "core",
+      "video": "test",
+      "body_area": "upper and lower back muscles",
+      "b_id": 5,
+      "image": "https://hips.hearstapps.com/hmg-prod/images/bicycle-crunch-1548880579.jpg"
+    },
+    {
+      "w_id": 8,
+      "name": "Reverse Crunch",
+      "category_id": 2,
+      "category_name": "core",
+      "video": "test",
+      "body_area": "upper and lower back muscles",
+      "b_id": 5,
+      "image": "https://hips.hearstapps.com/hmg-prod/images/reverse-crunch-1616426556.jpg?crop=0.502xw:1.00xh;0.254xw,0&resize=1200:*"
+    },
+    {
+      "w_id": 9,
+      "name": "Leg lifts",
+      "category_id": 2,
+      "category_name": "core",
+      "video": "test",
+      "body_area": "upper and lower back muscles",
+      "b_id": 5,
+      "image": "https://www.realsimple.com/thmb/QhYatYXTruJAadx0Kvw-5LligxA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/leg-lifts-GettyImages-492860471-ffa4ac2bcaca4772b4411cfaf6c1090c.jpg"
+    },
+    {
+      "w_id": 10,
+      "name": "Russian twist",
+      "category_id": 2,
+      "category_name": "core",
+      "video": "test",
+      "body_area": "upper and lower back muscles",
+      "b_id": 5,
+      "image": "https://media1.popsugar-assets.com/files/thumbor/pPENdoOAzUtfrfO4gbcFhZDi4c4=/fit-in/792x792/filters:format_auto():upscale()/2024/01/02/752/n/1922729/11f7997c94f34d8e_PS23_Fitness_Workout_08_Move_05_Russian_Twist.jpg"
+    },
+    {
+      "w_id": 11,
+      "name": "Glute Bridge",
+      "category_id": 2,
+      "category_name": "core",
+      "video": "test",
+      "body_area": "upper and lower back muscles",
+      "b_id": 5,
+      "image": "https://opt.net.au/wp-content/uploads/hip-bridge.jpg"
+    },
+    {
+      "w_id": 12,
+      "name": "Deadbug",
+      "category_id": 2,
+      "category_name": "core",
+      "video": "test",
+      "body_area": "upper and lower back muscles",
+      "b_id": 5,
+      "image": "https://media.self.com/photos/580a37dc7f7be8915ea98685/master/w_1600,c_limit/dead-bug_ab-stacked.jpg"
+    },
+    {
+      "w_id": 13,
+      "name": "Bird dog Exercise",
+      "category_id": 2,
+      "category_name": "core",
+      "video": "test",
+      "body_area": "upper and lower back muscles",
+      "b_id": 5,
+      "image": "https://media1.popsugar-assets.com/files/thumbor/g9cjaQqk_hKNzpxnbXbYZhnjIrE=/fit-in/792x792/filters:format_auto():upscale()/2016/03/04/782/n/1922398/2ee70a7d18af78da_Circuit-One-Bird-Dog.jpg"
+    },
+    {
+      "w_id": 14,
+      "name": "Crunches",
+      "category_id": 2,
+      "category_name": "core",
+      "video": "test",
+      "body_area": "upper and lower back muscles",
+      "b_id": 5,
+      "image": "https://media1.popsugar-assets.com/files/thumbor/NGkry6E6J_JvLjgu4E7BwKzFz08/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2018/01/04/233/n/41245764/a97b89f6bdd06fdf_Basic-Crunch/i/Basic-Crunch.jpg"
+    },
+    {
+      "w_id": 15,
+      "name": "Leg Raise",
+      "category_id": 2,
+      "category_name": "core",
+      "video": "test",
+      "body_area": "upper and lower back muscles",
+      "b_id": 5,
+      "image": "https://shockfitapp.com/cdn/shop/articles/Leg_Raise_Hold_BW_2400x.jpg?v=1595126531"
+    }
+  ],
+  "workout_category": [
+    {
+      "wt_id": 1,
+      "category": "core training",
+      "category_name": "core"
+    },
+    {
+      "wt_id": 2,
+      "category": "High intensity interval training",
+      "category_name": "intensity"
+    }
+  ],
+  "body_area": [
+    {
+      "b_name": "chest",
+      "b_id": 1
+    },
+    {
+      "b_name": "arms",
+      "b_id": 2
+    },
+    {
+      "b_name": "hips and thigh",
+      "b_id": 3
+    },
+    {
+      "b_name": "core, upper body, lower body",
+      "b_id": 4
+    },
+    {
+      "b_name": "upper and lower back musclesy",
+      "b_id": 5
+    }
+  ],
+  "diet_plan": [
+    {
+      "day": "monday",
+      "d_id": 1,
+      "breakfast": "testb B",
+      "lunch": "test L",
+      "dinner": "test D",
+      "day_time_snack": "test snack 1",
+      "evening_snack": "test snack 2"
+    },
+    {
+      "day": "tuesday",
+      "d_id": 2,
+      "breakfast": "testb B",
+      "lunch": "test L",
+      "dinner": "test D",
+      "day_time_snack": "test snack 1",
+      "evening_snack": "test snack 2"
+    },
+    {
+      "day": "wednesday",
+      "d_id": 3,
+      "breakfast": "testb B",
+      "lunch": "test L",
+      "dinner": "test D",
+      "day_time_snack": "test snack 1",
+      "evening_snack": "test snack 2"
+    },
+    {
+      "day": "thursday",
+      "d_id": 4,
+      "breakfast": "testb B",
+      "lunch": "test L",
+      "dinner": "test D",
+      "day_time_snack": "test snack 1",
+      "evening_snack": "test snack 2"
+    },
+    {
+      "day": "friday",
+      "d_id": 5,
+      "breakfast": "testb B",
+      "lunch": "test L",
+      "dinner": "test D",
+      "day_time_snack": "test snack 1",
+      "evening_snack": "test snack 2"
+    },
+    {
+      "day": "saturday",
+      "d_id": 6,
+      "breakfast": "testb B",
+      "lunch": "test L",
+      "dinner": "test D",
+      "day_time_snack": "test snack 1",
+      "evening_snack": "test snack 2"
+    },
+    {
+      "day": "sunday",
+      "d_id": 7,
+      "breakfast": "testb B",
+      "lunch": "test L",
+      "dinner": "test D",
+      "day_time_snack": "test snack 1",
+      "evening_snack": "test snack 2"
+    }
+  ],
+  "monthly_plan": [
+    {
+      "date": "1",
+      "date_id": 1,
+      "month": "january",
+      "m-id": 1,
+      "workout_set": []
+    }
+  ],
+  "logged_workouts": [
+    {
+      "e_id": 1,
+      "name": "pushup",
+      "equipment_machine": "dumbell",
+      "weight_strength": "10kg",
+      "countsPerRound": 12,
+      "rounds": 3,
+      "date": 1713913200000,
+      "day": 1,
+      "month": 1,
+      "id": 1
+    },
+    {
+      "e_id": 2,
+      "name": "bench press",
+      "equipment_machine": "dumbell",
+      "weight_strength": "6kg",
+      "countsPerRound": 12,
+      "rounds": 3,
+      "day": 1,
+      "date": 1713913200000,
+      "month": 1,
+      "id": 2
+    }
+  ],
+  "planned_workouts": [
+    {
+      "e_id": 1,
+      "name": "pushup t1293034567877",
+      "equipment_machine": "dumbell",
+      "weight_strength": "10kg",
+      "countsPerRound": 12,
+      "rounds": 3,
+      "date": 1713913200000,
+      "id": 1
+    },
+    {
+      "e_id": 2,
+      "name": "bench press",
+      "equipment_machine": "dumbell",
+      "weight_strength": "6kg",
+      "countsPerRound": 12,
+      "rounds": 3,
+      "date": "1713913200000"
+    },
+    {
+      "test": "t",
+      "name": "T",
+      "id": 2
+    },
+    {
+      "name": "Russian twist",
+      "machine": "",
+      "weight": 0,
+      "counts": 0,
+      "rounds": 0,
+      "date": 1713740400000,
+      "id": 10
+    },
+    {
+      "name": "Deadbug",
+      "machine": "",
+      "weight": 0,
+      "counts": 0,
+      "rounds": 0,
+      "date": 1713740400000,
+      "id": 12
+    }
+  ]
 }
