@@ -11,6 +11,7 @@ const MyList = () => {
     // )));
     // console.log("This is new data : ",data, newData);
     // },[data])
+    console.log("Loading my list");
 
     return ( 
         <div>
