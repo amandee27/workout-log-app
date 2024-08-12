@@ -47,7 +47,7 @@ const Login = ({ onLogin }) => {
 
     const login = () => {
         console.log("triggerring")
-        event.preventDefault();
+        //event.preventDefault();
         fetch('http://localhost:8000/login', {
             method: 'POST',
             headers: {
@@ -64,6 +64,7 @@ const Login = ({ onLogin }) => {
             console.log(data);
             localStorage.setItem('login', JSON.stringify(true));
             localStorage.setItem('token', JSON.stringify(data.accessToken));
+            localStorage.setItem('username', JSON.stringify(data.user.username));
             setLoggedIn(true);
             onLogin();
             navigate("/");
