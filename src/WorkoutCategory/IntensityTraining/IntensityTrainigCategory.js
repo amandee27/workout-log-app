@@ -1,11 +1,11 @@
 import useFetch from "../../useFetch";
 import './IntensityTrainigCategory.css'
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const IntensityTrainingCategory = () => {
     const { data } = useFetch('http://localhost:8000/workouts');
     //var itensityExercises = data.filter(exercise => exercise.category_id==1);
-
+    const navigate = useNavigate()
     return (
         <div className="intensityTrainingContainer">
 
@@ -26,7 +26,7 @@ const IntensityTrainingCategory = () => {
                                         </Link>
                                         </div>
                                         <div className="col-3 "><button href="#" className="btnStyle2">Log</button></div>
-                                        <div className="col-3"><button href="#" className="btnStyle2">View</button></div>
+                                        <div className="col-3"><button onClick={() => {navigate(`/view-details?name=${exercise.name}&id=${exercise.w_id}`)}}  className="btnStyle2">View</button></div>
                                     </div>
                                 </div>
                         </div>
