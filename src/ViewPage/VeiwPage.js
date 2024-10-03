@@ -1,19 +1,17 @@
 import './ViewPage.css';
 import useFetch from "../useFetch";
-import { useLocation, useSearchParams } from 'react-router-dom';
+import {  useSearchParams } from 'react-router-dom';
 
 
 const VeiwPage = () => {
     const [searchParam, setSearchParam] = useSearchParams();
     const myParam = searchParam.get('id');
-    console.log(myParam);
     const { data } = useFetch(`http://localhost:8000/workout_details?w_id=${myParam}`);
     return (
         data ? (
-            data.filter(
-                (exercise) => (exercise.category_name === "core")).map(
+            data.map(
                     (exercise, index) => (
-                        <div className="container">
+                        <div className="container" key={index}>
                             <div className="row">
                                 <div className="col-sm">
                                     <div className="row">
@@ -61,8 +59,8 @@ const VeiwPage = () => {
                                         <div>
                                             <h6 className="subHeadingStyles"><b>Straight Leg Raise Instructions</b></h6>
                                             <ol className="detailsStyles">
-                                                {exercise.instructions.map((instruct) => (
-                                                    <li key={instruct.id}>{instruct}</li>)
+                                                {exercise.instructions.map((instruct,index) => (
+                                                    <li key={index}>{instruct}</li>)
                                                 )}
                                             </ol>
                                         </div>
@@ -89,8 +87,8 @@ const VeiwPage = () => {
                                         <div>
                                             <h6 className="subHeadingStyles"><b>Related Exercises</b></h6>
                                             <ol className="detailsStyles">
-                                                {exercise.related_exercise.map((exer) => (
-                                                    <li>{exer}</li>
+                                                {exercise.related_exercise.map((exer,index) => (
+                                                    <li  key={index}>{exer}</li>
                                                 )
                                                 )}
                                             </ol>
