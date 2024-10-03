@@ -5,7 +5,7 @@ import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import WorkoutCategory from './WorkoutCategory/WorkoutCategory';
 import LoggedWorkout from './LoggedWorkout/LoggedWorkout';
 import WorkoutSummmary from './WorkoutSummary';
-import WeightMonitor from './Weight Monitor/WeightMonitor';
+import WeightMonitor from './WeightMonitor/WeightMonitor';
 import Login from './Login';
 import SignIn from './Sign-In';
 import PageNotFound from './PageNotFound';
@@ -21,6 +21,7 @@ import { BrowserRouter } from 'react-router-dom';
 import AddWorkout from './AddWorkout/AddWorkout';
 import LoggedWorkoutDetail from './LoggedWorkout/LoggedWorkoutDetails/LoggedWorkoutDetails';
 import TestMainPage from './Testpage/TestMainPage';
+import VeiwPage from './ViewPage/VeiwPage';
 
 
 function App() {
@@ -115,6 +116,7 @@ function App() {
               <Route path='/weight-summary' element={<WeightMonitor />}></Route>
               <Route path='/core-training' element={< CoreTrainingCategory />}></Route>
               <Route path='/intensity-training' element={< IntensityTrainingCategory />}></Route>
+              <Route path='/view-details' element={< VeiwPage/>}></Route>
               <Route path='/my-list' element={<MyList />}></Route>
               <Route path='/calendar' element={<PlannedWorkout />}></Route>
               <Route path='/add-workout' element={<AddWorkout />}></Route>

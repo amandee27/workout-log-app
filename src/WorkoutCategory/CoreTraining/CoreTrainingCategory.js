@@ -25,7 +25,9 @@ const CoreTrainingCategory = () => {
                                         </Link>
                                     </div>
                                     <div className="col-3"><button href="#" className="btnStyle2">Log</button></div>
+                                    <Link to={`/view-details?name=${exercise.name}&id=${exercise.w_id}`}>
                                     <div className="col-3"><button href="#" className="btnStyle2">View</button></div>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
