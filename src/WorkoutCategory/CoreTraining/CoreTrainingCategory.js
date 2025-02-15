@@ -1,10 +1,16 @@
 import useFetch from "../../useFetch";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import './CoreTrainingCategory.css';
 
 const CoreTrainingCategory = () => {
 
     const { data } = useFetch('http://localhost:8000/workouts');
+    const navigate = useNavigate();
+    function logExercise (name, w_id){
+        
+        console.log(w_id, name);
+        navigate(`/log-exercise?name=${name}&id=${w_id}`)
+    }
     return (
         <div className="coreTrainingContainer">
 
@@ -24,7 +30,7 @@ const CoreTrainingCategory = () => {
                                             <button href="#" className="btnStyle"><b>Add to My Plan</b></button>
                                         </Link>
                                     </div>
-                                    <div className="col-3"><button href="#" className="btnStyle2">Log</button></div>
+                                    <div className="col-3"><button onClick={()=>logExercise(exercise.name,exercise.w_id)} className="btnStyle2">Log</button></div>
                                     <Link to={`/view-details?name=${exercise.name}&id=${exercise.w_id}`}>
                                     <div className="col-3"><button href="#" className="btnStyle2">View</button></div>
                                     </Link>
@@ -52,6 +58,8 @@ function capitalizeFirstLetter(string) {
     }).join(" ");
     return finalData;
 }
+
+
 
 
 export default CoreTrainingCategory;

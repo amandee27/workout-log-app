@@ -22,6 +22,7 @@ import AddWorkout from './AddWorkout/AddWorkout';
 import LoggedWorkoutDetail from './LoggedWorkout/LoggedWorkoutDetails/LoggedWorkoutDetails';
 import TestMainPage from './Testpage/TestMainPage';
 import VeiwPage from './ViewPage/VeiwPage';
+import LogExercise from './LogExercise/LogExercise';
 
 
 function App() {
@@ -117,6 +118,7 @@ function App() {
               <Route path='/core-training' element={< CoreTrainingCategory />}></Route>
               <Route path='/intensity-training' element={< IntensityTrainingCategory />}></Route>
               <Route path='/view-details' element={< VeiwPage/>}></Route>
+              <Route path='/log-exercise' element={<LogExercise/>}></Route>
               <Route path='/my-list' element={<MyList />}></Route>
               <Route path='/calendar' element={<PlannedWorkout />}></Route>
               <Route path='/add-workout' element={<AddWorkout />}></Route>
