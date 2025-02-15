@@ -397,5 +397,17 @@
       "date": 1713740400000,
       "id": 12
     }
+  ],
+  "workout_details":[
+    {
+      "w_id": 1,
+      "name": "bench press",
+      "category_id": 1,
+      "category_name": "intensity",
+      "video": "test",
+      "body_area": "chest",
+      "b_id": 1,
+      "image": "https://i.pinimg.com/564x/3a/9e/1b/3a9e1b050f7b9c10a9bccc52438b9b2e.jpg"
+    }
   ]
 }
